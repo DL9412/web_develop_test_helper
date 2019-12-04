@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script src="/layui/layui.js"></script>
+</head>
+<body>
+    <div class="title">password generator</div>
+    <div class="layui-form">
+        <div class="layui-form-item line">
+            <input type="checkbox" id="upper" title="ABC">
+            <input type="checkbox" id="lower" title="abc" checked>
+            <input type="checkbox" id="number" title="123" checked>
+            <input type="checkbox" id="symbol" title="_*-">
+        </div>
+        <div class="line">
+            <div id="pwdslider"></div>
+        </div>
+        <div class="line">
+            <button type="button" class="layui-btn" id="createpwbtn">generate</button>
+            <input type="text" class="layui-input" disabled id="pwd">  
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="title">account saver</div>
+    <div class="layui-form" id="accsaver">
+        <div class="accbox">
+        </div>
+        <div class="line">
+            <input type="text" class="layui-input" id="inputacc">  
+            <button type="button" class="layui-btn" id="addacc">add</button>
+        </div>
+    </div>
+</body>
+<script src="/js/index.js"></script>
+<style>
+body{
+    width: 400px;
+    padding: 20px;
+}
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.line{
+    min-height: 40px;
+}
+#pwdslider{
+    margin-top: 20px;
+}
+#createpwbtn{
+    width: 120px;
+    float: left;
+}
+#pwd{
+    width: calc(100% - 120px);
+    float: left;
+}
+.accinput{
+    width: calc(100% - 120px);
+    float: left;
+}
+.btnbox{
+    width: 120px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.accline button{
+    width: 40px;
+    padding: 0;
+}
+#inputacc{
+    width: calc(100% - 120px);
+    float: left;
+}
+#addacc{
+    width: 120px;
+    float: left;
+}
+.pwdline,.noteline{
+    display: none;
+    padding-top: 5px;
+    overflow: hidden;
+}
+.pwdline.show,.noteline.show{
+    display: block;
+}
+.accsaverline{
+    padding-bottom: 10px;
+}
+.btnnext{
+    width: calc(100% - 120px);
+    float: left;
+}
+.cpyprev{
+    width: 120px;
+    float: left;
+}
+</style>
+</html>

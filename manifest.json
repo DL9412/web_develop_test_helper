@@ -1,0 +1,50 @@
+{
+    "manifest_version": 2,
+    "name": "mytest",
+    "version": "0.0.1",
+    "description": "mytest",
+    "icons":
+    {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "background":
+    {
+        "page": "background.html"
+    },
+    "browser_action": 
+    {
+        "default_icon": "img/icon.png",
+        "default_title": "test",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": 
+    [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/jquery-3.4.1.min.js"],
+            "css": [],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions":
+    [
+        "contextMenus",
+        "tabs",
+        "notifications",
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": ["js/inject.js"],
+    "homepage_url": "https://www.baidu.com",
+    "options_page": "options.html",
+    "options_ui":
+    {
+        "page": "options.html",
+        "chrome_style": true
+    }
+}
